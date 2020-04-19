@@ -443,6 +443,23 @@
 			<string>string.quoted.single.haskell</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>^([\p{Ll}_][\p{Ll}_\p{Lu}\p{Lt}\p{Nd}']*)\s*(::|∷|$)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.haskell</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.double-colon.haskell</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>(?x)^(\s*)
                 (?&lt;fn&gt;
